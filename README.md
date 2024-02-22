@@ -1,6 +1,6 @@
 # LojaLuxo
 
-<h1> Realizado por: </h1>
+<h2> Realizado por: </h2>
 <div align="center">
     <table>
     <tr>
