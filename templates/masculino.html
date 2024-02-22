@@ -1,0 +1,139 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+    <body>
+        <nav class="navbar ms-1 mt-0">
+            <div class="container-fluid">
+                <div class="d-flex">
+                    <a class="navbar-brand fs-6 texto " style="cursor: pointer;"
+                        href="http://192.168.0.130:5000/women">Mulher</a>
+                    <a class="navbar-brand fs-6 texto" style="cursor: pointer;"
+                        href="http://192.168.0.130:5000/#">Homepage</a>
+                </div>
+                <form class=" d-flex me-1" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                </form>
+            </div>
+        </nav>
+        <style>
+            .texto:hover {
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        </style>
+
+        <main>
+            <div style="text-align: center;">
+                <p class="fs-1 fw-bolder text-center" style="cursor: default;">COLEÇÃO MASCULINA</p>
+                <p style="max-width: 70%; margin: 0 auto; cursor: default;">
+                    Obtenha o visual Versace por excelência combinando os estilos mais recentes das passarelas com uma bolsa
+                    extravagante e sapatos modernos. Para o toque final, procure uma variedade de acessórios luxuosos.</p>
+            </div>
+            <hr>
+
+            <div class="position-relative d-flex justify-content-around p-2"  style="cursor:pointer">
+                <div class="fw-bold postion-relative d-flex"><span class="material-symbols-outlined">
+                tune
+                </span><div>Filtros</div></div>
+                <div class="fw-bold">8 Produtos</div>
+                <div class="dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ordenar por
+                </div>
+            </div>
+            <hr>
+
+            <div class="d-flex mb-5">
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/JaquetaAdultoHomen.png') }}" class="card-img-top imagem-principal"
+                        alt="...">
+                    <div class="card-body">
+                        <p class="card-text" style="cursor: default;">
+                            <p class="fw-bold">{{ DicLuxo[11]['produto'] }}</p>
+                            <p class="fw-bold">R${{ DicLuxo[11]['valor'] }}</p>
+                            Uma jaqueta preta de couro, elegante e atemporal, oferece uma fusão de estilo e durabilidade.</p>
+                    </div>
+                </div>
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/MoletomHo.png') }}" class="card-img-top imagem-principal"
+                        alt="...">
+                    <div class="card-body" style="cursor: default;">
+                            <p class="fw-bold">{{ DicLuxo[13]['produto'] }}</p>
+                            <p class="fw-bold">R${{ DicLuxo[13]['valor'] }}</p>
+                            <p class="card-text" style="cursor: default;">Um moletom preto da Versace, ostentando sua icônica logo, combina estilo com o glamour característico da marca.</p>
+                    </div>
+                </div>
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/blusadragon.png') }}" class="card-img-top imagem-principal">
+                    <div class="card-body" style="cursor: default;">
+                    
+                        <p class="fw-bold">{{ DicLuxo[21]['produto'] }}</p>
+                        <p class="fw-bold">R${{ DicLuxo[21]['valor'] }}</p>
+                        <p class="card-text" >Uma blusa que combina elegância com um toque de fantasia. O fundo escuro da blusa proporciona um contraste marcante com o dragão dourado, criando um visual impactante.</p>
+                    </div>
+                </div>
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/piscina.png') }}" class="card-img-top imagem-principal" alt="...">
+                    <div class="card-body" style="cursor: default;">
+                        <p class="fw-bold">{{ DicLuxo[14]['produto'] }}</p>
+                        <p class="fw-bold">R${{ DicLuxo[14]['valor'] }}</p>
+                        <p class="card-text" style="cursor: default;">Um shorts de piscina com detalhes azulados é uma peça versátil e elegante, perfeita para dias de verão à beira da piscina.</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" d-flex mb-4">
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/BolsaHomem.png') }}" class="card-img-top imagem-principal" alt="...">
+                    <div class="card-body" style="cursor: default;">
+                    
+                        <p class="fw-bold">{{ DicLuxo[12]['produto'] }}</p>
+                        <p class="fw-bold">R${{ DicLuxo[12]['valor'] }}</p>
+                        <p class="card-text" style="cursor: default;">Uma mochila preta, prática e versátil, oferece espaço e estilo para transportar seus pertences com elegância discreta.</p>
+                    </div>
+                </div>
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/Chapeuuuu.png') }}" class="card-img-top imagem-principal" alt="...">
+                    <div class="card-body" style="cursor: default;">
+                        <p class="fw-bold">{{ DicLuxo[20]['produto'] }}</p>
+                        <p class="fw-bold">R${{ DicLuxo[20]['valor'] }}</p>
+                        <p class="card-text" style="cursor: default;">Um bucket preto, combina estilo e funcionalidade, ideal para completar um visual urbano ou casual.</p>
+                    </div>
+                </div>
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/Relogio.png') }}" class="card-img-top imagem-principal" alt="...">
+                    <div class="card-body" style="cursor: default;">
+                        <p class="fw-bold">{{ DicLuxo[16]['produto'] }}</p>
+                        <p class="fw-bold">R${{ DicLuxo[16]['valor'] }}</p>
+                        <p class="card-text" style="cursor: default;">Um relógio branco da Versace, adornado com detalhes dourados, emana sofisticação e estilo atemporal.</p>
+                    </div>
+                </div>
+                <div class="card ms-4" style="width: 18rem; cursor: pointer;">
+                    <img src="{{ url_for('static', filename='./img/TenisM.png') }}" class="card-img-top imagem-principal" alt="...">
+                    <div class="card-body" style="cursor: default;">
+                        <p class="fw-bold">{{ DicLuxo[4]['produto'] }}</p>
+                        <p class="fw-bold">R${{ DicLuxo[4]['valor'] }}</p>
+                        <p class="card-text" style="cursor: default;">Tênis alto elegante, perfeito para elevar qualquer look com sofisticação e estilo.</p>
+                    </div>
+                </div>
+
+                <style>
+                    .card-img-top {
+                        transition: transform 0.3s ease;
+                        background-size:cover ;
+                    }
+                    
+                    .card-img-top:hover {
+                        transform: scale(1.2);
+                        
+                    }
+
+                    .imagem-sobreposta {
+                    position: absolute;
+                    z-index: 1;
+                    }
+                 </style>
+            </div>
+
+        </main>
+    </body>
+{% endblock%}

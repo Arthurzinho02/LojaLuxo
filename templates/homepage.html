@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+    <nav class="navbar ms-1 mt-0">
+        <div class="container-fluid">
+        <div class="d-flex">
+        <a class="navbar-brand fs-6 link " style="cursor: pointer;" href="http://192.168.0.130:5000/women">Mulher</a>
+        <a class="navbar-brand fs-6 link" style="cursor: pointer;" href="http://192.168.0.130:5000/men">Homem</a>
+        </div>
+        <form class=" d-flex me-1" role="search">
+        <input class="form-control me-2" type="search"  placeholder="Buscar" aria-label="Search" >
+        </form>
+        </div>
+    </nav>
+    <style>
+        .link:hover{
+        font-weight: 500;
+        text-decoration: underline;
+        }
+    </style>
+
+    <main>
+        <div style="text-align: center;">
+        <p class="fs-1 text-center fw-bolder p-2" style="color: #000; cursor: default;">VERSACE</p>
+
+        
+        <p style="max-width: 70%; margin: 0 auto; cursor: default;">
+            Embarque em uma jornada deslumbrante pelo icônico mundo da moda, onde a excelência italiana se encontra com a inovação criativa. Bem-vindo ao site oficial da Versace, onde cada clique é uma entrada para um reino de sofisticação incomparável.
+        </p>
+        <hr/>
+        <p class="p-2 fs-6">Escolha uma categoria:</p>
+        </div>
+        
+        <div class="d-flex justify-content-around mb-5">
+            <div class="card" style="width: 25%;">
+            <img src="{{ url_for('static', filename='./img/gigi.jpg') }}" class="card-img-top" alt="Imagem Feminino";>
+            <div class="card-body">
+                <h5 class="card-title" style="cursor: default;">FEMININO</h5>
+                <a href="http://192.168.0.130:5000/women" class="btn btn-dark ">Visualizar produtos</a>
+            </div>
+            </div>
+        
+            <div class="card" style="width: 25%;">
+            <img src="{{ url_for('static', filename='./img/homemcapa.jpg') }}" class="card-img-top" alt="Imagem Masculino" style="max-width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title" style="cursor: default;">MASCULINO</h5>
+                <a href="http://192.168.0.130:5000/men" class="btn btn-dark ">Visualizar produtos</a>
+            </div>
+            </div>
+        </div>
+    </main>
+{% endblock %} 
